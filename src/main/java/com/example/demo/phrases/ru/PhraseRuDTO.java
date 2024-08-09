@@ -7,4 +7,5 @@ public class PhraseRuDTO {
     private Long id;
     private String textLatin;
     private String textCyrillic;
+    private Long phraseEnId;
 }

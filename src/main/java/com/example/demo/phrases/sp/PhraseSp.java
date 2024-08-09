@@ -14,7 +14,6 @@ public class PhraseSp {
     private Long id;
     private String text;
 
-    @OneToOne
-    @JoinColumn(name = "phrase_en_id")
+    @OneToOne(mappedBy = "spanishTranslation")
     private PhraseEn phraseEn;
 }

@@ -15,9 +15,11 @@ public class PhraseEn {
     private Long id;
     private String text;
 
-    @OneToOne(mappedBy = "phraseEn", cascade = CascadeType.ALL, orphanRemoval = true)
+    @OneToOne(cascade = CascadeType.ALL, orphanRemoval = true)
+    @JoinColumn(name = "phraseRu_id", referencedColumnName = "id")
     private PhraseRu russianTranslation;
 
-    @OneToOne(mappedBy = "phraseEn", cascade = CascadeType.ALL, orphanRemoval = true)
+    @OneToOne(cascade = CascadeType.ALL, orphanRemoval = true)
+    @JoinColumn(name = "phraseSp_id", referencedColumnName = "id")
     private PhraseSp spanishTranslation;
 }

@@ -6,4 +6,5 @@ import lombok.Data;
 public class PhraseSpDTO {
     private Long id;
     private String text;
+    private Long phraseEnId;
 }

@@ -15,7 +15,6 @@ public class PhraseRu {
     private String textLatin;
     private String textCyrillic;
 
-    @OneToOne
-    @JoinColumn(name = "phrase_en_id")
+    @OneToOne(mappedBy = "russianTranslation")
     private PhraseEn phraseEn;
 }
