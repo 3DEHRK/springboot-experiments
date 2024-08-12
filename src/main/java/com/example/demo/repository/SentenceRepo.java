@@ -1,4 +1,6 @@
 package com.example.demo.repository;
 
-public interface SentenceRepo {
-}
+import com.example.demo.entity.Sentence;
+import org.springframework.data.jpa.repository.JpaRepository;
+
+public interface SentenceRepo extends JpaRepository<Sentence, Long> {}

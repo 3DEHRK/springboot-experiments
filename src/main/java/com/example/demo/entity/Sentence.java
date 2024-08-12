@@ -1,10 +1,11 @@
 package com.example.demo.entity;
 
 import jakarta.persistence.*;
-import lombok.AllArgsConstructor;
-import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
+import lombok.AllArgsConstructor;
+import lombok.Builder;
+import java.util.List;
 
 @Data
 @NoArgsConstructor
@@ -18,12 +19,6 @@ public class Sentence {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    /*@Column(nullable = false)
-    private String text;
-
-    @Column(nullable = false)
-    private String description;
-
     @OneToMany(mappedBy = "sentence", cascade = CascadeType.ALL, orphanRemoval = true)
-    private List<Translation> translations;*/
+    private List<Translation> translations;
 }
