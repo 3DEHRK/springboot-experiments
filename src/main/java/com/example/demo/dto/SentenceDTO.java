@@ -12,5 +12,5 @@ import java.util.List;
 @Builder
 public class SentenceDTO {
     private Long id;
-    private List<TranslationDTO> translations;
+    //private List<TranslationDTO> translations;
 }

@@ -6,7 +6,6 @@ import com.example.demo.mapper.SentenceMapper;
 import com.example.demo.repository.SentenceRepo;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-
 import java.util.List;
 import java.util.stream.Collectors;
 
