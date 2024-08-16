@@ -40,7 +40,7 @@ public class TranslationService {
             translationRepo.deleteById(id);
             return ResponseEntity.ok().build();
         } else {
-            return ResponseEntity.notFound().build();
+            throw new IllegalArgumentException("Id not found");
         }
     }
 
@@ -53,10 +53,10 @@ public class TranslationService {
 
     public ResponseEntity<TranslationDTO> createTranslateSentence(Long sentenceId, Long languageId, String translationText) {
         Sentence sentence = sentenceRepo.findById(sentenceId)
-                .orElseThrow(() -> new RuntimeException("Sentence not found"));
+                .orElseThrow(() -> new IllegalArgumentException("Sentence not found"));
 
         Language language = languageRepo.findById(languageId)
-                .orElseThrow(() -> new RuntimeException("Language not found"));
+                .orElseThrow(() -> new IllegalArgumentException("Language not found"));
 
         Translation translation = Translation.builder()
                 .sentence(sentence)

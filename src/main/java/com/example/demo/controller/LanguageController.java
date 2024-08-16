@@ -20,7 +20,7 @@ public class LanguageController {
     }
 
     @PostMapping
-    public LanguageDTO createLanguage(@RequestBody() LanguageDTO languageDTO) {
+    public LanguageDTO createLanguage(@RequestBody LanguageDTO languageDTO) {
         return languageService.createLanguage(languageDTO);
     }
 }

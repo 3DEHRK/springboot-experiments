@@ -1,0 +1,20 @@
+### Create language
+POST {{url}}/language
+Content-Type: application/json
+
+{ "name": "de" }
+
+> {%
+    client.test("Request executed successfully", function() {
+        client.assert(response.status === 200, " Response status is not 200");
+    });
+%}
+
+### Get all languages
+GET {{url}}/language
+
+> {%
+    client.test("Languages exist", function() {
+        client.assert(response.body.length > 0, "No content");
+    });
+%}
